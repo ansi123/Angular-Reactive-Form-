@@ -1,0 +1,15 @@
+<h2>Reactive Forms</h2>
+
+<form [formGroup]="signupForm" (ngSubmit)="PostData()">
+  <input type='text' name="fname" formControlName='fname' placeholder="fname"/><br><br>
+  <!-- <span *ngIf="signupForm.get('fname').invalid && signupForm.get('fname').touched"> 
+   invalid name
+  </span> -->
+
+  <input type='text' name="lname" formControlName='lname' placeholder="lname"/>
+  <!-- <span></span> -->
+  <br><br>
+  <input type='text' name="EmailId" formControlName='EmailId' placeholder="email"/><br><br>
+  <input type='password' name="Password" formControlName='Password' placeholder="password"/><br><br>
+  <button type='submit' [disabled]='!signupForm.valid'>Submit</button>
+</form>
